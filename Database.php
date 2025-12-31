@@ -20,8 +20,8 @@ class Database{
     }
    
 } 
-$db = Database::getConnection();
-if($db){
-    echo "Connexion réussie";
-}
+// $db = Database::getConnection();
+// if($db){
+//     echo "Connexion réussie";
+// }
 
