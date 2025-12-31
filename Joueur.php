@@ -1,5 +1,6 @@
 <?php
 class Joueur extends Personne{
+    public static float $prime_signature;
     public function __construct(string $name, 
                                 string $nationalite,
                                 string $email, 
@@ -7,11 +8,11 @@ class Joueur extends Personne{
                                 private float $valeur_march,
                                 ?int $id=null)
     {
-        $contract=new Contract(1,100000,737282,new DateTime());
+        $contract=new Contract(1,100000,737282,new DateTime(),new DateTime());
          parent::__construct($name, $nationalite, $email,$contract ,$id);
     }
 
-    public function getAnnualCost(){
-        
+    public function getAnnualCost():float{
+        return ($this->contract->getSalaire()*12)+self::$prime_signature;
     }
 }
