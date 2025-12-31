@@ -57,15 +57,28 @@ class Equipe{
         $stmt=$db->prepare($sql);
         $stmt->execute(
             [':nom'=>$this->nom, 
-            ':budget'=>$this->budget ,
+            ':budget'=>$this->budget,
             ":manager"=>$this->manager
             ]
         );
     }
+
+    public function affichage():array{
+        $db=Database::getConnection();
+        $sql="SELECT * FROM equipe";
+        $rslt=$db->query($sql);
+        $equipes=$rslt->fetchAll(PDO::FETCH_ASSOC);
+        // print_r($equipes);
+        return $equipes;
+    }
 }
 
+
 $e=new Equipe("NomEquipe",1200000,'NomManager');
-$e->setNom("Lions FC");
-$e->setBudget(37289.99);
-$e->setManager("Ahmed Benali");
-$e->create();
+// $e->setNom("L FC");
+// $e->setBudget(45289.99);
+// $e->setManager("Ahmed Ahmed");
+// $e->create();
+foreach($e->affichage() as $equipe){
+ echo "Id:". $equipe['id'] . "\n Name: " . $equipe['nom'] . "\n MANAGER: " . $equipe['manager'] . "\n";
+}
