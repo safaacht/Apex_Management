@@ -3,7 +3,11 @@
 abstract class Personne{
     
 
-    public function __construct(protected string $name,protected string $nationalite,protected string $email,protected Contract $contract,protected ?int $id=null)
+    public function __construct(protected string $name,
+                                protected string $nationalite,
+                                protected string $email,
+                                protected Contract $contract,
+                                protected ?int $id=null)
     {
     }
 
