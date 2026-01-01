@@ -6,7 +6,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
 body{min-height:100vh;background:radial-gradient(circle at top,#141a2e,#0b0f1a);color:#e5e7eb;display:flex;flex-direction:column;}
-main{flex:1;display:flex;justify-content:center;align-items:center;width:100%;}
+main{flex:1;display:flex;justify-content:center;align-items:center;width:100%;margin-left: 5rem;}
 .form-box{width:360px;background:#0f172a;padding:30px;border-radius:14px;border:1px solid #1f2937;box-shadow:0 0 25px rgba(124,58,237,.45);}
 h2{text-align:center;margin-bottom:25px;color:#22d3ee;letter-spacing:1px;}
 label{font-size:14px;color:#9ca3af;margin-bottom:6px;display:block;}

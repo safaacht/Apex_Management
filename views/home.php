@@ -20,6 +20,7 @@ main{
     align-items:center;
     text-align:center;
     padding:20px;
+    margin-left: 8rem;
 }
 h1{
     font-size:42px;
