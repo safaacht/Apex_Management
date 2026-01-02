@@ -10,6 +10,7 @@ footer{
     padding:12px;
     font-size:13px;
     color:#9ca3af;
+    margin-left: 8rem;
 }
 
 footer span{
