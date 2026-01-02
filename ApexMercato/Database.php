@@ -1,5 +1,8 @@
 <?php
 
+namespace Apex;
+use PDO;
+
 class Database{
     private static $host="localhost";
     private static $db_name="apex_management";
@@ -20,8 +23,3 @@ class Database{
     }
    
 } 
-// $db = Database::getConnection();
-// if($db){
-//     echo "Connexion réussie";
-// }
-
