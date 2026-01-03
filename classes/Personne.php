@@ -1,7 +1,8 @@
 <?php
+namespace Apex\Personne;
+use Apex\Contract\Contract;
 
 abstract class Personne{
-    
 
     public function __construct(protected string $name,
                                 protected string $nationalite,

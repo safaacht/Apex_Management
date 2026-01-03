@@ -1,5 +1,8 @@
 <?php
-
+namespace Apex\Coach;
+use Apex\Personne\Personne;
+use Apex\Contract\Contract;
+use DateTime;
 class Coach extends Personne{
     public static float $frais_dep= 3999.99;
     public function __construct(string $name,

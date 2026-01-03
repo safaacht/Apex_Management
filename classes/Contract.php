@@ -1,5 +1,7 @@
 <?php
 
+namespace Apex\Contract;
+
 class Contract{
     public function __construct(private int $id, 
                                 private float $salaire, 

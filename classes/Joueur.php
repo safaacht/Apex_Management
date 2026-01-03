@@ -1,4 +1,8 @@
 <?php
+namespace Apex\Joueur;
+use Apex\Personne\Personne;
+use Apex\Contract\Contract;
+use DateTime;
 class Joueur extends Personne{
     public static float $prime_signature;
     public function __construct(string $name, 

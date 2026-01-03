@@ -1,4 +1,7 @@
 <?php
+namespace Apex\Equipe;
+use Apex\Database\Database;
+use PDO;
 require_once 'Database.php';
 class Equipe{
 
@@ -31,7 +34,7 @@ class Equipe{
 
 
     
-    public function getId():int{
+    public function getId():?int{
         return $this->id;
     }
 
@@ -80,5 +83,6 @@ $e=new Equipe("NomEquipe",1200000,'NomManager');
 // $e->setManager("Ahmed Ahmed");
 // $e->create();
 foreach($e->affichage() as $equipe){
- echo "Id:". $equipe['id'] . "\n Name: " . $equipe['nom'] . "\n MANAGER: " . $equipe['manager'] . "\n";
-}
+    echo "ID: {$equipe['id']}<br>";
+    echo "Nom: {$equipe['nom']}<br>";
+    echo "Manager: {$equipe['manager']}<br><hr>";}

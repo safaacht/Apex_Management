@@ -1,6 +1,6 @@
 <?php
 
-namespace Apex;
+namespace Apex\Database;
 use PDO;
 
 class Database{
