@@ -26,7 +26,7 @@ input:focus{outline:none;border-color:#7c3aed;box-shadow:0 0 8px rgba(124,58,237
 <main>
     <div class="form-box">
         <h2>LOGIN</h2>
-        <form method="post">
+        <form method="post" action="../actions/login.php">
             <label>Email</label>
             <input type="email" name="email" required>
             <label>Password</label>
