@@ -96,14 +96,15 @@
         <a href="../ApexMercato/index.php"><span class="icon">🏠</span>Home</a>
         <a href="../views/dashboard.php"><span class="icon">📊</span>Dashboard</a>
 
-        <?php if(isset($_SESSION['user_id'])){ ?>
+        <?php if(isset($_SESSION['role'])){ ?>
             <a href="../views/JoueurForm.php"><span class="icon">➕</span>Players</a>
             <a href="../views/CoachForm.php"><span class="icon">➕</span>Coaches</a>
             <a href="../actions/logout.php"><span class="icon">🔓</span>Logout</a>
-        <?php } ?>
+        <?php }else{?>
 
         <a href="../views/LoginForm.php"><span class="icon">🔑</span>Login</a>
         <a href="../views/SignupForm.php"><span class="icon">📝</span>Sign Up</a>
+        <?php } ?>
     </nav>
 </aside>
 
