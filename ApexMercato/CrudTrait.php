@@ -14,7 +14,7 @@ protected function initCrud():void
 }
 
 // creat
-public function creat(array $data):bool
+public function create(array $data):bool
 {
     $columns=implode(', ',array_keys($data));
     $placeholders=":".implode(", :", array_keys($data));
@@ -37,7 +37,7 @@ public function all():array{
 public function delete(int $id):bool
 {
     $stmt=$this->conn->prepare("
-    SELECT * FROM {$this->table} WHERE id= :id
+    DELETE FROM {$this->table} WHERE id= :id
     ");
 
     return $stmt->execute(["id"=>$id]);
@@ -49,11 +49,11 @@ public function update(int $id, array $data):bool
     $fields="";
     foreach($data as $key=>$value){
         
-        $fields .= "$key :$key,";
+        $fields .= "$key=:$key,";
     }
     $fields=rtrim($fields,",");
     $data['id']=$id;
-    
+
     $stmt=$this->conn->prepare(
         "UPDATE {$this->table} SET $fields WHERE id= :id"
     );
