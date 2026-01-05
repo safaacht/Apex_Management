@@ -97,8 +97,11 @@
         <a href="../views/dashboard.php"><span class="icon">📊</span>Dashboard</a>
 
         <?php if(isset($_SESSION['role'])){ ?>
+            <?php if($_SESSION['role']=="admin"){ ?>
+
             <a href="../views/JoueurForm.php"><span class="icon">➕</span>Players</a>
             <a href="../views/CoachForm.php"><span class="icon">➕</span>Coaches</a>
+            <?php } ?>
             <a href="../actions/logout.php"><span class="icon">🔓</span>Logout</a>
         <?php }else{?>
 
