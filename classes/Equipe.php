@@ -1,15 +1,18 @@
 <?php
-namespace Apex\Equipe;
-use Apex\Database\Database;
+namespace classes;
+use ApexMercato\Database;
 use PDO;
+use ApexMercato\CrudTrait;
 class Equipe{
+    use CrudTrait;
 
     public function __construct(protected string $nom, 
                                 protected float $budget,
                                 protected string $manager,
                                 protected ?int $id=null)
     {
-
+        $this->table = 'equipe';
+        $this->initCrud();
     }
 
 
@@ -31,48 +34,31 @@ class Equipe{
         $this->manager=$manager;
     }
 
-
-    
     public function getId():?int{
         return $this->id;
     }
-
-        
+   
     public function getNom():string{
         return $this->nom;
     }
-
         
     public function getBudget():float{
         return $this->budget;
     }
-
-        
+       
     public function getManager():string{
         return $this->manager;
     }
 
 
-    public function create(){
-        $db=Database::getConnection();
-        $sql="INSERT INTO equipe(nom,budget,manager) VALUES(:nom,:budget,:manager)";
-        $stmt=$db->prepare($sql);
-        $stmt->execute(
-            [':nom'=>$this->nom, 
-            ':budget'=>$this->budget,
-            ":manager"=>$this->manager
-            ]
-        );
+    public function save():bool
+    {
+        $data=[
+            'nom' => $this->nom,
+            'budget' => $this->budget,
+            'manager' => $this->manager
+        ];
+        return $this->create($data);
     }
 
-    public function affichage():array{
-        $db=Database::getConnection();
-        $sql="SELECT * FROM equipe";
-        $rslt=$db->query($sql);
-        $equipes=$rslt->fetchAll(PDO::FETCH_ASSOC);
-        // print_r($equipes);
-        return $equipes;
-    }
 }
-
-

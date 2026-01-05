@@ -1,6 +1,6 @@
 <?php
 
-namespace Apex\Database;
+namespace ApexMercato;
 use PDO;
 
 class Database{

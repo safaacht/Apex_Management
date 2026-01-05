@@ -1,6 +1,6 @@
 <?php
 
-namespace Apex\Contract;
+namespace classes;
 
 class Contract{
     public function __construct(private int $id, 

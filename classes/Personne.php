@@ -1,6 +1,6 @@
 <?php
-namespace Apex\Personne;
-use Apex\Contract\Contract;
+namespace classes;
+use classes\Contract;
 
 abstract class Personne{
 

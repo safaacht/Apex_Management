@@ -1,6 +1,6 @@
 <?php
-namespace Apex\Core;
-use Apex\Database\Database;
+namespace ApexMercato;
+use ApexMercato\Database;
 use PDO;
 
 trait CrudTrait{
