@@ -2,7 +2,6 @@
 namespace Apex\Equipe;
 use Apex\Database\Database;
 use PDO;
-require_once 'Database.php';
 class Equipe{
 
     public function __construct(protected string $nom, 
@@ -77,12 +76,3 @@ class Equipe{
 }
 
 
-$e=new Equipe("NomEquipe",1200000,'NomManager');
-// $e->setNom("L FC");
-// $e->setBudget(45289.99);
-// $e->setManager("Ahmed Ahmed");
-// $e->create();
-foreach($e->affichage() as $equipe){
-    echo "ID: {$equipe['id']}<br>";
-    echo "Nom: {$equipe['nom']}<br>";
-    echo "Manager: {$equipe['manager']}<br><hr>";}
