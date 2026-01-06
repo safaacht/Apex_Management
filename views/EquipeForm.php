@@ -12,7 +12,7 @@
 <main>
     <div class="form-box">
         <h2>ADD SQUAD</h2>
-        <form action="../actions/CreateEquipe.php">
+        <form  method="POST" action="../actions/CreateEquipe.php">
             <label>name</label>
             <input type="text" name="nom" required>
             <label>Email</label>
