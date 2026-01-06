@@ -15,10 +15,10 @@
         <form action="../actions/CreateEquipe.php">
             <label>name</label>
             <input type="text" name="nom" required>
-            <label>Budget</label>
-            <input type="price" name="budget" required>
             <label>Email</label>
             <input type="text" name="manager" required>
+            <label>Budget</label>
+            <input type="number" name="budget" required>
             <button>Add Squad</button>
         </form>
     </div>
