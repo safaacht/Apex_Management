@@ -9,14 +9,24 @@ class Joueur extends Personne{
                                 string $nationalite,
                                 string $email, 
                                 private string $role, 
-                                private float $valeur_march,
+                                private float $valeur_marchande,
                                 ?int $id=null)
     {
-        $contract=new Contract(1,100000,737282,new DateTime(),new DateTime());
+        $contract=new Contract(100000,737282,new DateTime(),new DateTime());
          parent::__construct($name, $nationalite, $email,$contract ,$id);
     }
 
     public function getAnnualCost():float{
         return ($this->contract->getSalaire()*12)+self::$prime_signature;
     }
+
+    public function setId($id):void{
+        $this->id=$id;
+    }
+
+    public function getId():?int{
+        return $this->id;
+    }
+
 }
+

@@ -1,22 +1,13 @@
 <?php
 namespace classes;
-use ApexMercato\Database;
-use PDO;
-use ApexMercato\CrudTrait;
 class Equipe{
-    use CrudTrait;
-
     public function __construct(protected string $nom, 
                                 protected float $budget,
                                 protected string $manager,
                                 protected ?int $id=null)
     {
-        $this->table = 'equipe';
-        $this->initCrud();
     }
 
-
-    
     public function setId($id):void{
         $this->id=$id;
     }
@@ -29,7 +20,6 @@ class Equipe{
         $this->budget=$budget;
     }
 
-    
     public function setManager($manager):void{
         $this->manager=$manager;
     }
@@ -49,16 +39,4 @@ class Equipe{
     public function getManager():string{
         return $this->manager;
     }
-
-
-    public function save():bool
-    {
-        $data=[
-            'nom' => $this->nom,
-            'budget' => $this->budget,
-            'manager' => $this->manager
-        ];
-        return $this->create($data);
-    }
-
 }
