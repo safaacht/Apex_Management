@@ -2,7 +2,7 @@
 
 <div class="form-box">
     <h2>ADD PLAYER</h2>
-    <form action="../actions/CreatePlayer.php" method="POST">
+    <form action="../actions/CreateJoueur.php" method="POST">
         <label>Name</label>
         <input type="text" name="name" required>
         <label>Nationality</label>
