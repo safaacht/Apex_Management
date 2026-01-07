@@ -75,6 +75,42 @@ button{width:100%;padding:10px;font-size:15px;font-weight:600;border-radius:8px;
 button:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(34,211,238,.35);}
 .contract-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 15px;}
 
+/* ===== LOGIN / SIGNUP BUTTONS ===== */
+.home-buttons{
+    /* display:flex; */
+    flex-direction:column;
+    align-items:center;        /* centrer */
+    gap:14px;
+    margin-top:20px;
+}
+
+.btn-home{
+    width:260px;               /* plus court */
+    padding:12px 0;
+    text-align:center;
+    font-size:15px;            /* écriture plus clean */
+    font-weight:600;
+    border-radius:12px;
+    text-decoration:none;
+    color:#020617;
+    background:linear-gradient(135deg, #7c3aed, #22d3ee);
+    transition:all .25s ease;
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
+}
+
+.btn-home:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 30px rgba(34,211,238,.45);
+}
+
+.btn-home:active{
+    transform:scale(.97);
+}
+
+.home_content{
+    margin-top: 8rem;
+}
+
 /* ====== FOOTER ====== */
 footer{
     position:fixed;
@@ -106,6 +142,8 @@ footer span{color:#22d3ee;}
                 <a href="../views/JoueurForm.php"><span class="icon">➕</span>Players</a>
                 <a href="../views/CoachForm.php"><span class="icon">➕</span>Coaches</a>
                 <a href="../views/EquipeForm.php"><span class="icon">➕</span>Squads</a>
+                <a href="../views/dashboardAdmin.php"><span class="icon">📊</span>Admin Dashboard</a>
+
             <?php } ?>
             <a href="../actions/logout.php"><span class="icon">🔓</span>Logout</a>
         <?php } else { ?>
@@ -116,7 +154,7 @@ footer span{color:#22d3ee;}
 </aside>
 
 <!-- TOPBAR -->
-<div class="topbar">APEX Management</div>
+<div class="topbar"></div>
 
 <!-- MAIN CONTENT -->
 <div class="main-content">
