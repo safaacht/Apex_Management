@@ -58,3 +58,28 @@ id int PRIMARY KEY AUTO_INCREMENT,
 
 
 ALTER TABLE contract ADD date_deb DATE NOT NULL
+
+
+
+ALTER TABLE joueur
+ADD contract_id INT,
+ADD CONSTRAINT fk_joueur_contract
+FOREIGN KEY (contract_id) REFERENCES contract(id);
+
+
+ALTER TABLE coach
+ADD contract_id INT,
+ADD CONSTRAINT fk_coach_contract
+FOREIGN KEY (contract_id) REFERENCES contract(id);
+
+
+
+SHOW CREATE TABLE contract;
+
+ALTER TABLE contract
+DROP FOREIGN KEY contract_ibfk_1,
+DROP FOREIGN KEY contract_ibfk_2;
+
+ALTER TABLE contract
+DROP COLUMN joueur_id,
+DROP COLUMN coach_id;
