@@ -1,5 +1,5 @@
 <?php
-namespace repository;
+namespace repositories;
 use ApexMercato\Database;
 use PDO;
 
