@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <button type="submit">Add Player</button>
+        <button type="submit" name="submit">Add Player</button>
     </form>
 </div>
 
