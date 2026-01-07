@@ -1,9 +1,9 @@
- <?php
+<?php
+namespace repository;
 use ApexMercato\Database;
 use PDO;
 
 class BaseRepository{
-
     protected PDO $conn;
     protected string $table;
     
@@ -13,6 +13,11 @@ class BaseRepository{
         $this->conn=Database::getConnection();
     }
     
+    public function __construct()
+    {
+        $this->initCrud();
+    }
+
     // creat
     public function create(array $data):bool
     {
