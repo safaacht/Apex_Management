@@ -1,6 +1,6 @@
 <?php
 namespace repositories;
-class CoachRepository extends BaseRepository{
+class ContractRepository extends BaseRepository{
     protected string $table = "contract";
  
 }
