@@ -39,4 +39,15 @@ class Equipe{
     public function getManager():string{
         return $this->manager;
     }
+
+    // affichage equipe
+    public function toArray()
+    {
+        return [
+            'id' => $this->getId(),
+            'nom' => $this->getNom(),
+            'budget' => $this->getBudget(),
+            'manager' => $this->getManager(),
+        ];
+    }
 }
