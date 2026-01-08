@@ -83,3 +83,7 @@ DROP FOREIGN KEY contract_ibfk_2;
 ALTER TABLE contract
 DROP COLUMN joueur_id,
 DROP COLUMN coach_id;
+
+
+ALTER TABLE transfer
+MODIFY COLUMN status ENUM('In progress', 'Done') NOT NULL DEFAULT 'In progress';
