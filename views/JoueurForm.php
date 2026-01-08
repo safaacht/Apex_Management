@@ -1,4 +1,13 @@
-<?php require_once '../ApexMercato/header.php'; ?>
+<?php 
+require_once '../ApexMercato/Autoload.php';
+require_once '../ApexMercato/header.php'; 
+
+use repositories\EquipeRepository;
+
+$equipeRepo=new EquipeRepository();
+$equipes=$equipeRepo->all();
+// var_dump($equipes);die;
+?>
 
 <div class="form-box">
     <h2>ADD PLAYER</h2>
@@ -32,6 +41,15 @@
                 <label>End Date</label>
                 <input type="date" name="date_fin" required>
             </div>
+        </div>
+        <div>
+            <label for="equipe">Equipe</label>
+            <select name="equipe"> 
+                <option >--Choose a team --</option>
+                <?php foreach($equipes as $equipe){ ?>
+                    <option value="<?= $equipe['id'] ?>"> <?= $equipe['nom'] ?></option>
+                <?php } ?>    
+            </select>
         </div>
 
         <button type="submit" name="submit">Add Player</button>
