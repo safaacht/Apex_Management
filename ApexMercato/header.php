@@ -69,7 +69,7 @@ body{
 .form-box h2{text-align:center;margin-bottom:15px;font-size:22px;color:#22d3ee;}
 .form-box h3{margin:15px 0 10px;font-size:14px;color:#7c3aed;font-weight:600;}
 label{display:block;font-size:13px;color:#9ca3af;margin-bottom:4px;}
-input{width:100%;padding:8px 10px;margin-bottom:12px;border-radius:6px;border:1px solid #1f2937;background:#020617;color:#e5e7eb;font-size:14px;}
+input,select{width:100%;padding:8px 10px;margin-bottom:12px;border-radius:6px;border:1px solid #1f2937;background:#020617;color:#e5e7eb;font-size:14px;}
 input:focus{border-color:#22d3ee;box-shadow:0 0 0 2px rgba(34,211,238,.15);}
 button{width:100%;padding:10px;font-size:15px;font-weight:600;border-radius:8px;background:linear-gradient(135deg,#7c3aed,#22d3ee);border:none;cursor:pointer;transition:.2s;}
 button:hover{transform:translateY(-1px);box-shadow:0 4px 10px rgba(34,211,238,.35);}
