@@ -12,4 +12,4 @@ $equipeRepo = new EquipeRepository();
 $equipeRepo->create($equipe->toArray());
 
 // redirect
-header("location:../views/home.php");exit;
+header("location:../views/dashboardAdmin.php");exit;
