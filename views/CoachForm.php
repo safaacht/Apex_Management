@@ -1,4 +1,15 @@
-<?php require_once '../ApexMercato/header.php'; ?>
+<?php 
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
+
+require_once '../ApexMercato/Autoload.php';
+require_once '../ApexMercato/header.php'; 
+use repositories\EquipeRepository;
+
+$equipeRepo=new EquipeRepository();
+$equipes=$equipeRepo->all();
+?>
 
 <div class="form-box">
     <h2>ADD COACH</h2>
@@ -31,6 +42,16 @@
             <div>
                 <label>End Date</label>
                 <input type="date" name="date_fin" required>
+            </div>
+            <div>
+                <label for="equipe">Equipe</label>
+                <select name="equipe" required>
+                    <option>-- Select Equipe --</option>
+                    <?php foreach ($equipes as $equipe) { ?>
+                        <option value="<?=$equipe['id']?>"><?= $equipe['nom'] ?></option>
+                        <?php }  ?>
+                </select>
+
             </div>
         </div>
 
