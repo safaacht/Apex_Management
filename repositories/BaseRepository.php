@@ -66,14 +66,15 @@ public function update(int $id, array $data):bool
     return $stmt->execute($data);
 }
 
-// affichage
-public function save(array $data){
-    $keys = array_keys($data);
-    $values = array_values($data);
-
-    $sql = "INSERT INTO " . $this->table . "( " . implode(', ', $keys) . " ) VALUES ( :" .  implode(', : ', $values) . ")";
-    var_dump($sql);
+// find by id
+public function findById(int $id,):?array
+{
+    $stmt=$this->conn->prepare("SELECT * FROM {$this->table} WHERE id= :id");
+    $stmt->execute(["id"=>$id]);
+    $rslt=$stmt->fetch(PDO::FETCH_ASSOC);
+    return $rslt ?: null;
 }
+
 
 }
 
