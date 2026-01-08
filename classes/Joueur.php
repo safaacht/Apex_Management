@@ -58,7 +58,7 @@ class Joueur extends Personne{
             "name"=>$this->getName(),
             "nationalite"=>$this->getNationalite(),
             "email"=>$this->getEmail(),
-            'contract'=>$this->contract->getId(),
+            'contract_id'=>$this->contract->getId(),
             "role"=>$this->getRole(),
             "valeur_marchande"=>$this->getValeurMarchande(),
         ];
