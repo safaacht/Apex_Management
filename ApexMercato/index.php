@@ -1,7 +1,3 @@
 <?php
-
-spl_autoload_register(function ($class){
-    require_once $class .".php";
-});
-
-header("location:../views/home.php");
+require_once __DIR__ . '/autoload.php';
+header("location:../views/home.php");exit;
