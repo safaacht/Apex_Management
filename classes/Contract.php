@@ -10,6 +10,7 @@ class Contract{
                                 private float $close_rachat,
                                 private string $date_fin,
                                 private  readonly string $date_deb,
+                                private int $equipe_id,
                                 private ?int $id=null
                                 )
     {
@@ -41,10 +42,11 @@ class Contract{
     public function toArray()
     {
         $arr = [
-            "salaire" => $this->salaire, 
-            "close_rachat" => $this->close_rachat,
-            "date_fin" => $this->date_fin,
-            "date_deb" => $this->date_deb,
+            "salaire" =>$this->salaire, 
+            "close_rachat" =>$this->close_rachat,
+            "date_fin" =>$this->date_fin,
+            "date_deb" =>$this->date_deb,
+            "equipe_id"=>$this->equipe_id
         ];
         return $arr;
     }
