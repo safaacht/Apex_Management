@@ -1,7 +1,23 @@
 <?php
 
 final class FinancialEngine{
-    public static function calculateTax(float $salaire){
-        return $salaire+($salaire*0.1);
+    private  float $taxeRate=0.2;
+    private  float $agentFeesRate=0.05;
+
+    public function calculateTotalCost(float $salaire):float
+    {
+        $tax= $salaire*$this->taxeRate;
+        $agentFees=$salaire*$this->agentFeesRate;
+
+        $total=$salaire+$agentFees+$tax;
+
+        return $total;
     }
+
+    public function affordable(float $salaire, float $equipeBudget): bool
+    {
+        $totalCost=$this->calculateTotalCost($salaire);
+        return $totalCost<=$equipeBudget;
+    }
+
 }
