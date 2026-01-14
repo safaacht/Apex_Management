@@ -18,7 +18,7 @@
             <input type="email" name="email" required>
             <label>Password</label>
             <input type="password" name="password" required>
-            <input id="button" type="submit" name="login" value="LOGIN"> 
+            <input id="Form_button" type="submit" name="login" value="LOGIN"> 
         </form>
         <div class="link">
             No account? <a href="../views/SignupForm.php">Create one</a>

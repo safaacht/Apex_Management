@@ -19,7 +19,7 @@
             <input type="email" name="email" required>
             <label>Password</label>
             <input type="password" name="password" required>
-            <input id="button" type="submit" name="signin" value="SIGN UP">
+            <input id="Form_button" type="submit" name="signin" value="SIGN UP">
         </form>
         <div class="link">
             Already registered? <a href="../views/LoginForm.php">Login</a>
