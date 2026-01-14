@@ -67,7 +67,7 @@ public function update(int $id, array $data):bool
 }
 
 // find by id
-public function findById(int $id,):?array
+public function findById(int $id,):null|array|object
 {
     $stmt=$this->conn->prepare("SELECT * FROM {$this->table} WHERE id= :id");
     $stmt->execute(["id"=>$id]);
